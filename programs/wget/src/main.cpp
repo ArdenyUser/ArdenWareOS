@@ -68,7 +68,7 @@ int wget_http(const std::string& url){
         message += domain;
         message += "\r\n";
         message += "Accept: text/html text/plain\r\n";
-        message += "User-Agent: wget (Thor OS)\r\n";
+        message += "User-Agent: wget (Arden Ware)\r\n";
         message += "\r\n";
 
         sock.send(message.c_str(), message.size());
