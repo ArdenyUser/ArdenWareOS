@@ -1,5 +1,5 @@
 //=======================================================================
-// Copyright Baptiste Wicht 2013-2018.
+// Copyright Avery Stafford 2021-2022.
 // Distributed under the terms of the MIT License.
 // (See accompanying file LICENSE or copy at
 //  http://www.opensource.org/licenses/MIT)
@@ -121,7 +121,7 @@ void kernel_main(){
     install_system_calls();
 
     sysfs::set_constant_value(sysfs::get_sys_path(), path("/version"), "0.1");
-    sysfs::set_constant_value(sysfs::get_sys_path(), path("/author"), "Baptiste Wicht");
+    sysfs::set_constant_value(sysfs::get_sys_path(), path("/author"), "Avery Stafford");
 
     // Initialize the scheduler
     scheduler::init();
@@ -138,7 +138,7 @@ void kernel_main(){
 }
 
 void suspend_boot(){
-    k_print_line("Impossible to continue boot...");
+    k_print_line("Arden Ware OS, on Thor OS kernal, Failed: Severe Boot Error.");
     suspend_kernel();
 }
 
