@@ -117,7 +117,7 @@ int main(){
     char input_buffer[256];
     std::string current_input;
 
-    tlib::print("thor> ");
+    tlib::print("arden ware> ");
 
     while(true){
         auto c = tlib::read_input(input_buffer, 255 );
@@ -170,7 +170,7 @@ int main(){
 
             current_input.clear();
 
-            tlib::print("thor> ");
+            tlib::print("arden ware> ");
         } else {
             input_buffer[c] = '\0';
 
