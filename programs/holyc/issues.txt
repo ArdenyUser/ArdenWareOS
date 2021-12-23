@@ -1,0 +1,31 @@
+Program problems
+=============
+Logs the history and current defects within the program.
+Fixes document the commit number and an optional message if wanted.
+Each defect is separated into categories and are pretty self explanatory.
+Misc is for anything not really codebase related.
+
+Bugs
+====
+* Hash table on the language type proves to have too many collisions, new hash table implimentation required, or better hashing algorithm.
+
+Quirks
+======
+* `hash_chars` gives to different values on a single char reference than a const char ptr.
+
+Build errors
+============
+* Fails on openbsd, makefile uses some gnu make specific features - standardise to all unix make's.
+Partial fix -> commit 42c61bce012a9bb5d410394aa0650a3ce337d5fc, compiles with gmake.
+Full fix -> commit 2bcc50d3c20e075d7b4194e2519098c0eee03224, makefile posix compliant.
+
+Crashes
+=======
+* Segfault on large files -> munmap_chunk(): invalid pointer. Possible issue with reallocation in src/parser.c: parser_add_token.
+Fixed -> commit 060c4760adc4304ad1b2567137d032e1380128e9, check for buffer writes outside the 64 char limit.
+* Segfault during lexer on files with no chars. Dataless files should skip the lexer entirely or fail the build.
+
+
+
+Misc
+====
